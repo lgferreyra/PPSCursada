@@ -41,14 +41,10 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Alta', id: 1 },
-    { title: 'Baja', id: 2 },
-    { title: 'Modificación', id: 3 },
+.controller('GestionCtrl', function($scope) {
+  $scope.operaciones = [
+    { title: 'alta', id: 1 },
+    { title: 'baja', id: 2 },
+    { title: 'modificación', id: 3 },
   ];
-})
-
-.controller('PlaylistCtrl', function($scope, $stateParams) {
- $scope.titulo="Alta";
 });

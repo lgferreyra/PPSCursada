@@ -60,7 +60,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     })
 
   .state('app.alta', {
-    url: '/gestion/alta',
+    url: '/gestion/new',
     views: {
       'menuContent': {
         templateUrl: 'templates/operacion.html',
@@ -70,7 +70,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   })
 
   .state('app.baja', {
-    url: '/gestion/baja',
+    url: '/gestion/delete',
     views: {
       'menuContent': {
         templateUrl: 'templates/operacion.html',
@@ -80,7 +80,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   })
 
   .state('app.modificacion', {
-    url: '/gestion/modificacion',
+    url: '/gestion/edit',
     views: {
       'menuContent': {
         templateUrl: 'templates/operacion.html',

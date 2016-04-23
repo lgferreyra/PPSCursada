@@ -45,49 +45,41 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       url: '/browse',
       views: {
         'menuContent': {
-          templateUrl: 'templates/browse.html'
+          templateUrl: 'templates/browse.html',
+          controller: 'ControladorPaises'
         }
       }
     })
-    .state('app.gestion', {
-      url: '/gestion',
+
+  .state('app.info', {
+      url: '/info/:pais',
       views: {
         'menuContent': {
-          templateUrl: 'templates/gestion.html',
-          controller: 'GestionCtrl'
+          templateUrl: 'templates/info.html',
+          controller: 'ControladorInfo'
         }
       }
     })
 
-  .state('app.alta', {
-    url: '/gestion/new',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/formulario.html',
-        controller: 'AltaCtrl'
+    .state('app.playlists', {
+      url: '/playlists',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/playlists.html',
+          controller: 'PlaylistsCtrl'
+        }
       }
-    }
-  })
+    })
 
-  .state('app.baja', {
-    url: '/gestion/delete',
+  .state('app.single', {
+    url: '/playlists/:playlistId',
     views: {
       'menuContent': {
-        templateUrl: 'templates/grilla.html',
-        controller: 'BajaCtrl'
-      }
-    }
-  })
-
-  .state('app.modificacion', {
-    url: '/gestion/edit',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/grilla.html',
-        controller: 'ModificacionCtrl'
+        templateUrl: 'templates/playlist.html',
+        controller: 'PlaylistCtrl'
       }
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/gestion');
+  $urlRouterProvider.otherwise('/app/playlists');
 });

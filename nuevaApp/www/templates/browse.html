@@ -1,0 +1,12 @@
+<ion-view view-title="Browse">
+  <ion-content>
+    <h1>{{titulo}}</h1>
+
+    <a class="item" ng-repeat="pais in listado" href="#/app/info/{{pais.name}}">
+    	<h1>Nombre: {{pais.name}}</h1>
+    	<h3>Continente: {{pais.region}}</h3>
+    	<h4>Nombre Nativo: {{pais.nativeName}}</h4>
+    	<p>Poblacion: {{pais.population}}</p>
+    </a>
+  </ion-content>
+</ion-view>

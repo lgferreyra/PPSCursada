@@ -43,8 +43,8 @@ angular.module('starter.controllers', [])
 
 .controller('GestionCtrl', function($scope) {
   $scope.operaciones = [
-    { title: 'Alta', url: 'new' },
-    { title: 'Baja', url: 'delete' },
-    { title: 'Modificación', url: 'edit' },
+    { title: 'Alta', url: 'new', icon: 'ion-person-add'},
+    { title: 'Baja', url: 'delete', icon: 'ion-close'},
+    { title: 'Modificación', url: 'edit', icon: 'ion-edit' },
   ];
 });

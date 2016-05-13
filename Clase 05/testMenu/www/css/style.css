@@ -1,0 +1,17 @@
+/* Empty. Add your own CSS if you like */
+.pull-right{
+  float: right;
+}
+.button-halfwidth{
+  width: 49%;
+  background-color: #D7EAFA;
+}
+.button-fullwidth{
+  width: 100%;
+  background-color: #D7EAFA;
+}
+.bar-octavio
+{
+    background-color: #D7EAFA;
+
+}

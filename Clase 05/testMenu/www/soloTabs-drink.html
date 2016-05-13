@@ -1,0 +1,26 @@
+  <ion-view title="Drink list">
+
+      <ion-nav-buttons side="left">
+
+      </ion-nav-buttons>
+      <ion-content has-header="true" padding="true">
+
+        <h3>Drink list</h3>
+         <input type="text" ng-model="busqueda">
+        <div class="list">
+         
+            <a class="item item-avatar" ng-repeat="pais in listado|filter: busqueda as resultado">
+             
+              <h1>{{pais.name}}</h1>
+              <h2>capital: {{pais.capital}}</h2>
+               <h4>nombre nativo: {{pais.nativeName}}</h4>
+              <p>poblacion: {{pais.population}}</p>
+               <p>región: {{pais.region}},subRegión: {{pais.subregion}}  </p>
+            </a>
+         
+
+        </div>
+      </ion-content>
+
+    
+    </ion-view>

@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout, $cordovaFlashlight) {
 
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
@@ -18,6 +18,12 @@ angular.module('starter.controllers', [])
   }).then(function(modal) {
     $scope.modal = modal;
   });
+
+  $scope.lintera = function() {
+    $cordovaFlashlight.toggle()
+      .then(function (success) { /* success */ },
+        function (error) { /* error */ });
+  }
 
   // Triggered in the login modal to close it
   $scope.closeLogin = function() {

@@ -1,5 +1,5 @@
 angular.module('starter.controllers')
-	.controller("AltaCtrl", function($scope, $stateParams, $ionicPopup){
+	.controller("AltaCtrl", function($scope, $stateParams, $ionicPopup, $cordovaVibration){
 		$scope.titulo = "Ingresar Alumno";
 		$scope.alumno = {};
 		$scope.alumno.nombre = "";
@@ -22,6 +22,8 @@ angular.module('starter.controllers')
 			if($scope.alumno.nombre == "" || $scope.alumno.apellido == "" || $scope.alumno.legajo == null ||
 				$scope.alumno.nacimiento == null || $scope.alumno.documento == null) 
 			{
+				$cordovaVibration.vibrate(150);
+				
 				var alertPopup = $ionicPopup.alert({
 			    title: 'Atención',
 			    template: 'Verifique los campos'
